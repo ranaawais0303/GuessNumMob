@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 function StartGameScreen(props) {
+  const [enteredNumber, setEnteredNumber] = useState();
+
+  // function numberInputHandler(enteredText) {
+  //   setEnteredNumber(enteredText);
+  // }
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -11,6 +16,8 @@ function StartGameScreen(props) {
         keyboardType="number-pad"
         autoCapitalize="none"
         autoCorrect={false}
+        // onChange={numberInputHandler}
+        // value={Number(enteredNumber)}
       />
       <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>

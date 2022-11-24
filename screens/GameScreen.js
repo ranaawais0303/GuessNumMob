@@ -1,8 +1,12 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
-function GameScreen(props) {
-  return <View></View>;
+function GameScreen() {
+  return (
+    <View>
+      <Text>Game Screen!</Text>
+    </View>
+  );
 }
 
 export default GameScreen;

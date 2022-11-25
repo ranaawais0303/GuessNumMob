@@ -1,8 +1,12 @@
-import React from "react";
-import { View } from "react-native";
+import React, { useState } from "react";
+import { View, Text, SafeAreaView } from "react-native";
 
 function GameOverScreen(props) {
-  return <View></View>;
+  return (
+    <SafeAreaView>
+      <Text>Game is Over</Text>
+    </SafeAreaView>
+  );
 }
 
 export default GameOverScreen;

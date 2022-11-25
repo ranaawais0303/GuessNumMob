@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 4,
     borderColor: Colors.accent500,
+    // Color: Colors.accent500,
     padding: 24,
     margin: 24,
     borderRadius: 8,

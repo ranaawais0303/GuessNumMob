@@ -4,7 +4,7 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import Title from "../components/ui/Title";
 import Colors from "../constants/colors";
 import StartGameScreen from "./StartGameScreen";
-function GameOverScreen(props) {
+function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
   // const [startGame, setStartGame] = useState(false);
 
   // function startGameHandler() {
@@ -24,11 +24,11 @@ function GameOverScreen(props) {
         />
       </View>
       <Text style={styles.summaryText}>
-        Your phone needed <Text style={styles.highlight}>X</Text> around to
-        guess the number
-        <Text style={styles.highlight}> Y</Text> .
+        Your phone needed <Text style={styles.highlight}>{roundsNumber}</Text>{" "}
+        around to guess the number
+        <Text style={styles.highlight}> {userNumber}</Text> .
       </Text>
-      <PrimaryButton>Start a New Game</PrimaryButton>
+      <PrimaryButton onPress={onStartNewGame}>Start a New Game</PrimaryButton>
     </View>
   );
 }

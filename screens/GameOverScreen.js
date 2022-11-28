@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 function GameOverScreen(props) {
   return (
-    <SafeAreaView>
+    <View style={styles.container}>
       <Text>Game is Over</Text>
-    </SafeAreaView>
+    </View>
   );
 }
 
 export default GameOverScreen;
+const styles = StyleSheet.create({
+  container: {
+    padding: 40,
+  },
+});

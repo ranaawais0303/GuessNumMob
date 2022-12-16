@@ -115,11 +115,13 @@ function GameScreen({ userNumber, onGameOver }) {
     );
   }
 
+  const screenPadding = width > 500 ? 12 : 24;
+  const listPadding = width ? 2 : 16;
   return (
-    <View style={styles.screen}>
+    <View style={[styles.screen, { padding: screenPadding }]}>
       <Title>Opponent's Guess</Title>
       {content}
-      <View style={styles.listContainer}>
+      <View style={[styles.listContainer, { padding: listPadding }]}>
         {/* {guessRounds.map((guessRound) => (
           <Text key={guessRound}>{guessRound}</Text>
         ))} */}
@@ -144,7 +146,6 @@ const deviceWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    padding: deviceWidth > 500 ? 12 : 24,
     marginTop: 30,
     alignItems: "center",
   },
@@ -164,6 +165,5 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 1,
-    padding: deviceWidth > 500 ? 2 : 16,
   },
 });

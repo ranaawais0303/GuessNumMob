@@ -41,7 +41,7 @@ function StartGameScreen({ onPickNumber }) {
     resetInputHandler();
   }
   /////Use Dimention
-  const marginTopDistance = height < 380 ? 30 : 100;
+  const marginTopDistance = height < 380 ? 30 : 50;
 
   ////////UI//////////////////
   return (
